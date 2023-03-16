@@ -39,10 +39,10 @@
   --font-u: clamp(180.61rem, 61.57vw + 165.22rem, 214.47rem);*/
 
   /* Colors */
-  --text-color: #ffffffc2;
-  --inactive-color: #ffffff81;
-  --black: #1f1f1f;
-  --white: #FFF;
+  --text-color: #e4e4e4c2;
+  --inactive-color: #e4e4e481;
+  --black: #0E0B0B;
+  --white: #e4e4e4;
   
 
   /* UNIVERSAL */
@@ -136,11 +136,10 @@
 }
 /* TYPE */
 p{
-  color: var(--white);
+  color: var(--text-color);
+  font-size: var(--h4);
+  font-weight: 400;
   font-family: var(--text);
-  font-style: normal;
-  font-size: var(--p);
-  line-height: 170%;
 }
 h1{
   font-size: var(--h1);
@@ -196,7 +195,7 @@ body{
 /* HEADER */
 nav{
   height: clamp(7.99rem, 2.72vw + 7.31rem, 9.49rem);
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   width: 100%;
 }
