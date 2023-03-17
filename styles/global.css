@@ -7,7 +7,7 @@
   --p: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
   --h4: clamp(1.2rem, 0.36vw + 1.1rem, 1.425rem);
   --h3: clamp(2rem, 0.68vw + 1.83rem, 2.37rem);
-  --h2: clamp(2.83rem, 0.96vw + 2.59rem, 3.36rem);
+  --h2:  clamp(3.41rem, 1.36vw + 3.66rem, 4.75rem);
   --h1: clamp(7.99rem, 2.72vw + 7.31rem, 9.49rem);
   --h1-project: clamp(6.2rem, 6.2vw + 5.7rem, 7.4rem);
 
@@ -40,10 +40,10 @@
   --font-u: clamp(180.61rem, 61.57vw + 165.22rem, 214.47rem);*/
 
   /* Colors */
-  --text-color: #e4e4e4c2;
-  --inactive-color: #e4e4e481;
+  --text-color: #acacac;
+  --inactive-color: #acacac;
   --black: #0E0B0B;
-  --white: #e4e4e4;
+  --white: #ffffff;
   
 
   /* UNIVERSAL */
@@ -52,7 +52,10 @@
   --ratio-2: calc(var(--ratio) * var(--ratio));
 }
 /* UNIVERSAL ELEMENTS */
-
+.logo {
+  color: var(--white);
+  max-width: clamp(3.41rem, 1.36vw + 3.66rem, 4.75rem);
+}
 .w{
   padding-left: var(--uni);
   padding-right: var(--uni);
@@ -126,6 +129,9 @@
 }
 .self-end{
   align-self: flex-end;
+}
+.push-left {
+  margin-left: auto;
 }
 ::selection {
   background: var(--white);
@@ -209,13 +215,6 @@ ul li a:hover{
   color: var(--white);
   transition: all 0.25s ease-in-out;
 }
-.logo {
-  color: var(--white);
-  max-width: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
-}
-.push-left {
-  margin-left: auto;
-}
 .hamburger {
   background: transparent;
   border: none;
@@ -236,7 +235,7 @@ ul li a:hover{
   width: 100%;
 }
 .hamburger:hover .hamburger-line {
-  background: #777;
+  background: var(--white);
 }
 .hamburger-line-top {
   top: 3px;
@@ -298,9 +297,6 @@ ul li a:hover{
   main{
     max-width: 100% !important;
     overflow-x: hidden !important;
-  }
-  .site{
-    width: 100%
   }
   :root{
     --h1: clamp(5.65rem, 1.93vw + 5.17rem, 6.71rem);

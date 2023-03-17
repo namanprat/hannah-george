@@ -5,7 +5,7 @@
      
        scrollTrigger: {
             trigger: ".work-title",
-            start: "top 17%",
+            start: "top 10%",
             end: "top 1%",
             ease: "expo.inOut",
             delay: -1,
