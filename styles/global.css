@@ -9,6 +9,7 @@
   --h3: clamp(2rem, 0.68vw + 1.83rem, 2.37rem);
   --h2: clamp(2.83rem, 0.96vw + 2.59rem, 3.36rem);
   --h1: clamp(7.99rem, 2.72vw + 7.31rem, 9.49rem);
+  --h1-project: clamp(6.2rem, 6.2vw + 5.7rem, 7.4rem);
 
 /* --font-1: clamp(0.71rem, 0.24vw + 0.65rem, 0.84rem);
   --a: clamp(0.85rem, 0.29vw + 0.78rem, 1.01rem);
@@ -303,8 +304,7 @@ ul li a:hover{
   }
   :root{
     --h1: clamp(5.65rem, 1.93vw + 5.17rem, 6.71rem);
-    --h1-project: clamp(6.82rem, 2.32vw + 6.24rem, 8.1rem);
-    --h1-footer: clamp(4.82rem, 1.64vw + 4.41rem, 5.73rem);
+    --h1-project: clamp(4.82rem, 1.64vw + 4.41rem, 5.73rem);
     --h2: clamp(2rem, 0.68vw + 1.83rem, 2.37rem);
   }
   .hamburger {
@@ -336,16 +336,14 @@ ul li a:hover{
 @media (max-width: 684px){
   :root{
     --h1: clamp(4.82rem, 1.64vw + 4.41rem, 5.73rem);
-    --h1-project: clamp(5.65rem, 1.93vw + 5.17rem, 6.71rem);
-    --h1-footer: clamp(4.41rem, 1.5vw + 4.3rem, 5.24rem);
+    --h1-project: clamp(4.41rem, 1.5vw + 4.3rem, 5.24rem);
   }
 
 }
 @media (max-width: 600px) {
   :root{
     --h1: clamp(4.82rem, 1.64vw + 4.41rem, 5.73rem);
-    /* --h1: clamp(4.41rem, 1.5vw + 4.3rem, 5.24rem); */
-    --h1-footer: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
+    --h1-fproject: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
   }
 }
 @media (max-width: 550px){
@@ -373,14 +371,13 @@ ul li a:hover{
 
   :root{
     --h1: clamp(3.41rem, 1.36vw + 3.66rem, 4.75rem);
-    --h1-project: clamp(5.23rem, 1.78vw + 4.79rem, 6.22rem);
-    --h1-footer: clamp(2.83rem, 0.96vw + 2.59rem, 3.36rem);
+    --h1-project: clamp(2.83rem, 0.96vw + 2.59rem, 3.36rem);
   }
 }
 @media (max-width: 450px) {
   :root{
-    --h1: clamp(3rem, 2vw + 3rem, 4rem);
-    --h1-project: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
+    /* --h1: clamp(3rem, 2vw + 3rem, 4rem); */
+    --h1: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
     --h2: clamp(2rem, 0.68vw + 1.83rem, 2.37rem);
     --h1-footer: clamp(2.41rem, 0.82vw + 2.21rem, 2.86rem);
 }
