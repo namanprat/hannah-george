@@ -10,28 +10,29 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: rgb(36, 24, 24);
-
+  background-color: rgb(22, 20, 20);
+}
+.balls {
+  position: absolute;
+  width: 900px;
+  height: 900px;
 }
 .hero-container{
-  overflow: visible;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   height: 100svh;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
-#hero{
+#title{
+  padding: 0;
+  align-self: center;
+  width: 100%;
   white-space: nowrap;
-  grid-column-start: 2;
-  grid-row-start: 2;
 }
 .marquee {
   z-index: 11;
-  overflow: hidden !important;
+  overflow: visible !important;
   padding: 0 !important;
   height: 20vh;
   position: absolute;
@@ -89,7 +90,7 @@
 }
 .work-title{
   margin-bottom: 20vh;
-  text-align: center;
+  /* text-align: center; */
 }
 #project{
   max-height: 600px;
@@ -133,6 +134,16 @@
     align-self: center;
     display: block;
   }
+
+  #title{
+    /* align-self: center; */
+    /* background-color: red; */
+    width: 100%;
+    white-space: nowrap;
+    /* grid-column-start: 2;
+    grid-row-start: 2; */
+  }
+
   .text-div{
     text-align: center;
     width: 100%;

@@ -15,6 +15,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=melodrama@500&f[]=satoshi@400&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
   </head>
@@ -24,7 +25,6 @@
       <img class="balls" src="./public/ball2.png">
     </div>
     <nav class="row center w-3">
-      <!-- <a href="./index.html"><img class="logo" src="./public/logo.svg"></a> -->
       <a href="./index.html"><h2>hg</h2></a>
       <div class="push-left">
         <button id="menu-toggler" data-class="menu-active" class="hamburger">
@@ -33,7 +33,7 @@
           <span class="hamburger-line hamburger-line-bottom"></span>
         </button>
         <ul id="primary-menu" class="space-bw">
-          <li id="nav-item"><a href="#">Work</a></li>
+          <li id="nav-item"><a href="https://www.behance.net/hannahgeorge6">Work</a></li>
           <li id="nav-item"><a href="#">Resume</a></li>
           <li id="nav-item"><a href="#">Contact</a></li>
         </ul>
@@ -42,8 +42,8 @@
       </div>
     </nav>
     <div id="page_1" class="w-3">
-      <div class="hero-container center space-bw">
-        <div id="hero" class="col self-center justify-center">
+      <div class="hero-container center">
+        <div id="title">
           <h4>Hello,</h4>
           <h1><span>I'm hannah</span></h1>
           <h4>and I design for humans.</h4>
@@ -64,34 +64,80 @@
       </div>
     </div>
     <div id="work" class="col center w-3">
-      <h1 class="work-title">Featured <span>Work</span></h1>
+        <h1 id="title" class="work-title">Featured <span>Work</span></h1>
 
-      <a id="project" class="row space-bw" href="#">
+      <a id="project" class="row space-bw" href="https://www.behance.net/gallery/159919305/Clinic-Co-UIUX">
           <div class="text-div">
-            <p>UI / UX Design </p>
+            <p>UI / UX Design</p>
             <h2>Clinic Co.</h2>
           </div>
           <img src="./images/cover.png">
         </a>
 
-        <a id="project" class="row space-bw" href="#">
+        <a id="project" class="row space-bw" href="https://www.behance.net/gallery/159928079/NEWS-UIUX">
           <div class="text-div">
-            <p>UI / UX Design </p>
-            <h2>Clinic Co.</h2>
+            <p>UI / UX Design</p>
+            <h2>News +</h2>
           </div>
           <img src="./images/cover.png">
         </a>
 
+        <a id="project" class="row space-bw" href="https://www.behance.net/gallery/162931869/Navigational-Service-for-Bangalores-Local-Market">
+          <div class="text-div">
+            <p>UI / UX Design</p>
+            <h2>Namma Bazaar</h2>
+          </div>
+          <img src="./images/cover.png">
+        </a>
 
     </div>
+
+    <footer class="col center space-bw w-3">
+        <div id="title" class="text col start">
+          <p>Have a project in mind?</p>
+          <a href="#"><h1>Let's <span>connect</span></h1></a>
+      </div>
+
+        <p id="socials" class="socials row center space-bw">
+          <a href="https://www.linkedin.com/in/hannah-m-george">Linkedin</a>
+          <a href="https://www.behance.net/hannahgeorge6">Behance</a>
+          <a href="https://www.behance.net/hannahgeorge6">Instagram</a>
+        </p>
+
+        <div id="bottom" class="socials row center space-bw">
+          <p>Copyright</p>
+          <p>Developer/ Co-designer: <a href="https://www.namanprat.com">Naman Pratulya</a></p>
+
+        </div>
+      
+    </footer>
     <script src="./scripts/nav.js"></script>
     <script src="./scripts/page1-gsap.js"></script>
     <script src="./scripts/marquee.js"></script>
-</body>
-<script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+    <script>
+var MR = function (X) { return Math.random() * X }, TwL = TweenLite, G = document.querySelectorAll('.balls');
+
+function BTweens() {
+    var W = window.innerWidth, H = window.innerHeight, C = 40;
+    TwL.killDelayedCallsTo(BTweens); 
+    TwL.delayedCall(C * 4, BTweens);
+    for (var i = G.length; i--;) {
+        var c = C, BA = [], GWidth = G[i].offsetWidth, GHeight = G[i].offsetHeight;
+        while (c--) { 
+            var SO = MR(1); 
+            BA.push({ x: MR(W - GWidth), y: MR(H - GHeight)}); 
+        };
+        if (G[i].T) { 
+            G[i].T.kill() 
+        }
+        G[i].T = TweenMax.to(G[i], C * 4, { bezier: { timeResolution: 0, type: "soft", values: BA }, delay: i * 0.35, ease: Linear.easeNone });
+    }
+};
+BTweens();
+window.onresize = function () {
+    TwL.killDelayedCallsTo(BTweens); 
+    TwL.delayedCall(0.4, BTweens);
+};
 </script>
 </html>
 
