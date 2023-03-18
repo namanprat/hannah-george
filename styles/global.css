@@ -23,6 +23,7 @@
    --bruv: clamp(2.62rem, 0.89vw + 2.39rem, 3.11rem);
   --font-5: clamp(2.83rem, 0.96vw + 2.59rem, 3.36rem);
   --h1: clamp(3.41rem, 1.36vw + 3.66rem, 4.75rem);
+      --h1: clamp(3.41rem, 1.36vw + 3.66rem, 4.75rem);
   --font-6: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
   --h1-footer: clamp(4.41rem, 1.5vw + 4.3rem, 5.24rem);
   --h1-footer: clamp(4.82rem, 1.64vw + 4.41rem, 5.73rem);
@@ -295,6 +296,9 @@ footer{
   color: var(--text-color);
   text-decoration: none;
 }
+#bottom{
+  flex-direction: row;
+}
 #bottom a{
   color: var(--text-color);
   text-decoration: none;
@@ -357,6 +361,9 @@ footer{
   ul li a {
     margin: 100px;
   }
+  #bottom{
+    flex-direction: column;
+  }
 }
 @media (max-width: 684px){
   :root{
@@ -401,8 +408,7 @@ footer{
 }
 @media (max-width: 450px) {
   :root{
-    /* --h1: clamp(3rem, 2vw + 3rem, 4rem); */
-    --h1: clamp(4rem, 1.36vw + 3.66rem, 4.75rem);
+    --h1: clamp(3rem, 2vw + 3rem, 4rem);
     --h2: clamp(2rem, 0.68vw + 1.83rem, 2.37rem);
     --h1-footer: clamp(2.41rem, 0.82vw + 2.21rem, 2.86rem);
 }

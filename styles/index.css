@@ -31,9 +31,9 @@
   white-space: nowrap;
 }
 .marquee {
-  z-index: 11;
-  overflow: visible !important;
-  padding: 0 !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  z-index: 1;
   height: 20vh;
   position: absolute;
   display: flex;
